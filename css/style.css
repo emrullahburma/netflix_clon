@@ -6,8 +6,8 @@ body {
   background-color: #111;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
   width: 4px;
+  background-color: red;
 }
 ::-webkit-scrollbar {
   width: 5px;
