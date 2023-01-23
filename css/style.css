@@ -3,7 +3,14 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  height: 300vh;
+  background-color: #111;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  width: 4px;
+}
+::-webkit-scrollbar {
+  width: 5px;
 }
 * {
   margin: 0;
@@ -24,12 +31,15 @@ body {
   padding: 12px 2%;
   position: fixed;
   top: 0;
+  background-color: rgba(0, 0, 0, 0.74);
+  z-index: 1000;
 }
 .nav img {
   height: 100%;
 }
 .home {
-  padding: 140px 2%;
+  padding-left: 2%;
+  padding-top: 140px;
 }
 .home h1 {
   font-size: 50px;
@@ -38,6 +48,7 @@ body {
 .home p {
   font-weight: 500;
   line-height: 17px;
+  margin-bottom: 30px;
 }
 .home-btn {
   padding: 8px 30px;
@@ -50,6 +61,7 @@ body {
   margin-bottom: 7px;
   cursor: pointer;
   transition: ease 0.3s;
+  font-weight: 600;
 }
 .home-btn:hover {
   background-color: white;
@@ -64,4 +76,40 @@ body {
     rgba(37, 37, 37, 0.61),
     #111
   );
+}
+.content-items::-webkit-scrollbar {
+  display: none;
+}
+.content-items::-webkit-scrollbar-thumb {
+  display: none;
+}
+.content-big-poster {
+  max-height: 250px;
+  margin-right: 10px;
+  transition: ease 0.3s;
+}
+.content h2 {
+  color: white;
+  margin-left: 2%;
+}
+.content-big-poster:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+.content-items {
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  margin-left: 20px;
+}
+.content-small-poster {
+  max-height: 100px;
+  width: 100%;
+  margin-right: 10px;
+  transition: ease 0.3s;
+}
+.content-small-poster:hover {
+  transform: scale(1.1);
+  transition: ease 0.3s;
 }
